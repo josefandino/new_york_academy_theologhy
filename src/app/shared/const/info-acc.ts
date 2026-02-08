@@ -1,40 +1,31 @@
-export const WUT_INFO = {
+export const ACADEMY_INFO = {
   // Información básica
-  title: 'World Theology University',
-  short_name: 'WTU',
-  tagline_es: 'Aprende, crece y transforma el mundo con tu fe y conocimiento',
-  tagline_en:
-    'Learn, grow and transform the world with your faith and knowledge',
-  description_es:
-    'En un mundo en constante cambio, World Theology University nace como un faro de conocimiento, fe y esperanza.',
-  description_en:
-    'In a world in constant change, World Theology University is born as a beacon of knowledge, faith and hope.',
+  title: 'World Academy Theology',
+  short_name: 'WAT',
+  tagline: 'Conectamos personas, construimos futuro',
+  description:
+    'En un mundo en constante cambio, World Academy Theology nace como un faro de conocimiento, fe y esperanza.',
 
   // Año de fundación
-  established_year: 2015,
+  established_year: 2010,
 
   // Identidad institucional
   mission:
-    'Ser una comunidad académica global donde la fe, el conocimiento y la práctica se encuentran para inspirar vidas transformadas y sociedades más justas, solidarias y esperanzadoras.',
+    'En American Chamber Commerce somos el puente que conecta empresas con sus clientes y con el mundo, facilitando soluciones legales y empresariales que fortalecen el presente y proyectan un crecimiento sin fronteras.',
   vision:
-    'Formar líderes con una sólida preparación teológica, espiritual y académica, capaces de responder con sabiduría y compasión a los desafíos de nuestro tiempo, promoviendo pensamiento crítico, diálogo intercultural y transformación personal y comunitaria.',
+    'Somos una comunidad global que inspira, conecta e impulsa el desarrollo empresarial sin límites, donde cada negocio —grande o pequeño— ya vive el futuro que imagina.',
   values: [
-    'Excelencia Académica',
-    'Fe Viva',
-    'Inclusión',
-    'Compasión',
-    'Diálogo y Respeto',
-    'Innovación',
     'Integridad inquebrantable',
-    'Integridad y transparencia',
+    'Cumplimiento estricto',
     'Confianza y responsabilidad',
-    'Compromiso ético',
-    'Cuidado y acompañamiento',
+    'Excelencia profesional',
+    'Compromiso con la ética empresarial',
+    'Seguridad y protección',
   ],
 
   // Contacto principal
   address: '753 East Tremont, Bronx, New York 10457, USA',
-  address_secondary: '111 E Monument Ave Ste 327, Bronx, New York, USA',
+  address_secondary: '111 E monument Ave ste 327, Bronx, New York, USA',
   city: 'Bronx',
   state: 'NY',
   country: 'USA',
@@ -51,23 +42,23 @@ export const WUT_INFO = {
   email_compliance: 'compliance@worldacademytheology.us',
 
   // URLs y redes sociales
-  website: 'https://academy.worlduniversitytheology.com',
-  url: 'https://academy.worlduniversitytheology.com',
-  portal_members: 'https://portal.academy.worlduniversitytheology.com',
-  portal_verification: 'https://verify.academy.worlduniversitytheology.com',
+  website: 'https://americanchamberofcommerce.us',
+  url: 'https://americanchamberofcommerce.us',
+  portal_members: 'https://portal.americanchamberofcommerce.us',
+  portal_verification: 'https://verify.americanchamberofcommerce.us',
 
   whatsapp:
-    'https://wa.me/13475459684?text=Deseo%20información%20sobre%20World%20Academy%20Theology',
-  facebook: 'https://facebook.com/worldacademytheology',
-  twitter: 'https://twitter.com/worldacademytheology',
-  instagram: 'https://instagram.com/worldacademytheology',
-  youtube: 'https://youtube.com/@worldacademytheology',
-  linkedin: 'https://linkedin.com/company/worldacademytheology',
+    'https://wa.me/13475459684?text=Deseo%20información%20sobre%20American%20Chamber%20Commerce',
+  facebook: 'https://facebook.com/americanchamberofcommerce',
+  twitter: 'https://twitter.com/americanchamber',
+  instagram: 'https://instagram.com/americanchamber',
+  youtube: 'https://youtube.com/@americanchamber',
+  linkedin: 'https://linkedin.com/company/americanchamberofcommerce',
 
   // Información legal y administrativa
   tax_id: 'XX-XXXXXXX', // EIN
   duns_number: 'XXXXXXXXX',
-  licensing: 'Licensed in New York, USA',
+  licensing: 'Registered at Chamber of Commerce USA',
 
   // Configuración técnica
   timezone: 'America/New_York',
@@ -76,7 +67,7 @@ export const WUT_INFO = {
 
   // Configuración de aplicación
   app_config: {
-    support_languages: ['en', 'es'],
+    support_languages: ['en', 'es', 'fr'],
     default_language: 'en',
     max_file_upload: '10MB',
     session_timeout: 30,
@@ -91,14 +82,14 @@ export const WUT_INFO = {
 
   // Configuración de notificaciones
   notification_settings: {
-    email_from_name: 'World Academy Theology',
+    email_from_name: 'American Chamber Commerce',
     email_reply_to: 'noreply@worldacademytheology.us',
-    sms_sender_id: 'WAT',
+    sms_sender_id: 'ACC',
   },
 
   // Información de emergencia
   emergency_contacts: {
-    legal_assistance: '+1-888-98-WAT ext. 911',
+    legal_assistance: '+1-888-98-CHAMBER ext. 911',
     it_emergency: 'emergency@worldacademytheology.us',
     after_hours: '+1-555-emergency',
   },
@@ -106,19 +97,17 @@ export const WUT_INFO = {
   // Configuración SEO y metadata
   seo: {
     meta_description:
-      'World Academy Theology: educación teológica online 100% accesible, inclusiva y de excelencia para formar líderes espirituales y académicos capaces de transformar el mundo.',
+      'American Chamber Commerce conecta empresas con clientes y facilita soluciones legales y empresariales para un crecimiento seguro y global.',
     keywords: [
-      'World Academy Theology',
-      'teología online',
-      'educación espiritual',
-      'formación teológica',
-      'liderazgo académico',
-      'diálogo intercultural',
-      'educación inclusiva',
+      'business chamber',
+      'commerce',
+      'legal services',
+      'business growth',
+      'international trade',
+      'entrepreneurship',
     ],
-    og_image:
-      'https://academy.worlduniversitytheology.com/assets/webp/logo_wat.png',
-    favicon: 'https://academy.worlduniversitytheology.com/favicon.ico',
+    og_image: 'https://americanchamberofcommerce.us/images/og-image.jpg',
+    favicon: 'https://americanchamberofcommerce.us/favicon.ico',
   },
 
   // APIs y servicios externos
@@ -131,7 +120,7 @@ export const WUT_INFO = {
 
   // Versioning y maintenance
   version: '1.0.0',
-  updated_at: '2025-09-10',
-  last_reviewed: '2025-09-10',
-  next_review_date: '2026-03-10',
+  updated_at: '2025-08-19',
+  last_reviewed: '2025-08-19',
+  next_review_date: '2026-02-19',
 };

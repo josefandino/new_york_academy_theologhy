@@ -10,7 +10,7 @@ import { LanguageService } from '@shared/services/language.service';
 import { OverlayMenuComponent } from '@layout/nav/overlay-menu/overlay-menu.component';
 
 import { UnsubscribeSubject } from '@shared/models/global.interface';
-import { WUT_INFO } from '@shared/const/info-acc';
+import { ACADEMY_INFO } from '@shared/const/info-acc';
 
 @Component({
   selector: 'app-nav',
@@ -97,7 +97,7 @@ export class NavComponent {
   public flagEn = './assets/webp/en.webp';
   public iconLanguage = './assets/svg/languege.svg';
 
-  readonly academyInfo = WUT_INFO;
+  readonly academyInfo = ACADEMY_INFO;
 
   protected readonly unsubscribeAll: UnsubscribeSubject = new Subject<void>();
 

@@ -11,35 +11,36 @@ import {
 
 import { interval, Subscription } from 'rxjs';
 
+import { AccordionComponent } from '@shared/components/accordion/accordion.component';
 import { AccordionItem } from '@shared/components/accordion/accordion.interface';
-import { WUT_INFO } from '@shared/const/info-acc';
+import { ACADEMY_INFO } from '@shared/const/info-acc';
 import { TextService } from '@shared/helpers';
 import { AngularModule, MaterialModule } from '@shared/modules';
 
 @Component({
   selector: 'app-es-home',
-  imports: [AngularModule, MaterialModule],
+  imports: [AngularModule, MaterialModule, AccordionComponent],
   templateUrl: './es-home.component.html',
   styleUrl: '../home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EsHomeComponent implements OnInit, AfterViewInit {
-  public video = '/video/world_university_edu.mp4';
-  public whyWtuImg = './assets/webp/home/why_wtu.webp';
-
   public isMenuOpen = false;
   public scrollPosition: number = 0;
+
+  title: string = '';
 
   @ViewChild('slider') slider!: ElementRef<HTMLDivElement>;
   currentIndex = 0;
 
-  readonly wtuInfo = WUT_INFO;
+  readonly academyInfo = ACADEMY_INFO;
 
   intervalSub!: Subscription;
 
   private readonly _text = inject(TextService);
 
   ngOnInit() {
+    // this.title = this._text.title;
     this.intervalSub = interval(3000).subscribe(() => this.nextSlide());
   }
 
@@ -53,31 +54,25 @@ export class EsHomeComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    /// Protección para cuando el slider está comentado
-    if (this.slider) {
-      // escuchamos el fin de la transición
-      this.slider.nativeElement.addEventListener('transitionend', () => {
-        if (this.currentIndex === this.sliderList.length) {
-          // si estamos en el slide duplicado (el 10), saltamos sin animación al original (0)
-          this.slider.nativeElement.style.transition = 'none';
-          this.currentIndex = 0;
-          this.slider.nativeElement.style.transform = `translateX(0%)`;
+    // escuchamos el fin de la transición
+    this.slider.nativeElement.addEventListener('transitionend', () => {
+      if (this.currentIndex === this.sliderList.length) {
+        // si estamos en el slide duplicado (el 10), saltamos sin animación al original (0)
+        this.slider.nativeElement.style.transition = 'none';
+        this.currentIndex = 0;
+        this.slider.nativeElement.style.transform = `translateX(0%)`;
 
-          // forzamos reflujo para reactivar transición en el siguiente movimiento
-          this.slider.nativeElement.offsetHeight;
-          this.slider.nativeElement.style.transition =
-            'transform 0.6s ease-in-out';
-        }
-      });
-    }
+        // forzamos reflujo para reactivar transición en el siguiente movimiento
+        this.slider.nativeElement.offsetHeight;
+        this.slider.nativeElement.style.transition =
+          'transform 0.6s ease-in-out';
+      }
+    });
   }
 
   nextSlide() {
-    /// Protección para cuando el slider está comentado
-    if (this.slider) {
-      this.currentIndex++;
-      this.slider.nativeElement.style.transform = `translateX(-${this.currentIndex * 100}%)`;
-    }
+    this.currentIndex++;
+    this.slider.nativeElement.style.transform = `translateX(-${this.currentIndex * 100}%)`;
   }
 
   ngOnDestroy(): void {
@@ -210,59 +205,32 @@ export class EsHomeComponent implements OnInit, AfterViewInit {
     {
       id: 1,
       img: './assets/webp/slider/academy-01.webp',
-      alt: this.wtuInfo.title,
+      alt: this.academyInfo.title,
     },
     {
       id: 2,
       img: './assets/webp/slider/academy-02.webp',
-      alt: this.wtuInfo.title,
+      alt: this.academyInfo.title,
     },
     {
       id: 3,
       img: './assets/webp/slider/academy-03.webp',
-      alt: this.wtuInfo.title,
+      alt: this.academyInfo.title,
     },
     {
       id: 4,
       img: './assets/webp/slider/academy-04.webp',
-      alt: this.wtuInfo.title,
+      alt: this.academyInfo.title,
     },
     {
       id: 5,
       img: './assets/webp/slider/academy-05.webp',
-      alt: this.wtuInfo.title,
+      alt: this.academyInfo.title,
     },
     {
       id: 6,
       img: './assets/webp/slider/academy-06.webp',
-      alt: this.wtuInfo.title,
-    },
-  ];
-
-  public cardImages = [
-    {
-      id: 1,
-      img: './assets/webp/home/wut_card_01.webp',
-      alt: this.wtuInfo.title,
-      path: '/programs',
-      title: 'Students',
-      description: 'Description',
-    },
-    {
-      id: 2,
-      img: './assets/webp/home/wut_card_02.webp',
-      alt: this.wtuInfo.title,
-      path: '/programs',
-      title: 'Students',
-      description: 'Description',
-    },
-    {
-      id: 3,
-      img: './assets/webp/home/students_card.webp',
-      alt: this.wtuInfo.title,
-      path: '/programs',
-      title: 'Students',
-      description: 'Description',
+      alt: this.academyInfo.title,
     },
   ];
 }
